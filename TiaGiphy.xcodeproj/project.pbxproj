@@ -109,6 +109,7 @@
 		3BA5688D202A1369009F0DAD = {
 			isa = PBXGroup;
 			children = (
+				3B784D41202A689B008E5366 /* README.md */,
 				3BA56898202A1369009F0DAD /* TiaGiphy */,
 				3BA568AD202A1369009F0DAD /* TiaGiphyTests */,
 				3BA568B8202A1369009F0DAD /* TiaGiphyUITests */,
@@ -177,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				3BA568D7202A17C8009F0DAD /* GiphyAPIService.swift */,
-				3B784D41202A689B008E5366 /* README.md */,
 				3B784D3F202A1BBE008E5366 /* Constants.swift */,
 				3BA568D9202A17DC009F0DAD /* Extensions.swift */,
 			);
