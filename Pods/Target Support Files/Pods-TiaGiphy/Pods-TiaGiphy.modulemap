@@ -1,0 +1,6 @@
+framework module Pods_TiaGiphy {
+  umbrella header "Pods-TiaGiphy-umbrella.h"
+
+  export *
+  module * { export * }
+}

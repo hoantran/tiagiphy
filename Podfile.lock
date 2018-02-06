@@ -1,0 +1,12 @@
+PODS:
+  - SwiftyGif (4.0.0)
+
+DEPENDENCIES:
+  - SwiftyGif
+
+SPEC CHECKSUMS:
+  SwiftyGif: 14c0e2dddb1b51da4919b68f7ad97a1c45785460
+
+PODFILE CHECKSUM: 91763cbe9022d2a8b9e7fd8f6bee9d4c0285dfa5
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,6 @@
+framework module Pods_TiaGiphyTests {
+  umbrella header "Pods-TiaGiphyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
