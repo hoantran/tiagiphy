@@ -13,7 +13,7 @@ class MainController: UIViewController, UICollectionViewDelegate {
   public var numberOfItemsPerSection = 0
   public let bkgColors = [UIColor(hex: "0x595FFF"), UIColor(hex: "0x69FFFA"), UIColor(hex: "0xDCFF96"), UIColor(hex: "0xFFB0AD"), UIColor(hex: "0xFF87FF")]
   public let giphyAPIService = GiphyAPIService()
-  public let gifManager = SwiftyGifManager(memoryLimit:100)
+  public let gifManager = SwiftyGifManager(memoryLimit:Constants.gifManagerMemoryLimitInMB)
   let semaphore = DispatchSemaphore(value: 1)
   private var scrollRequestEnabled = true
   let semaphoreQueue = DispatchQueue.global(qos: .userInitiated)

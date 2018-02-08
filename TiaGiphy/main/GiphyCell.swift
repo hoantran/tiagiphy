@@ -11,12 +11,6 @@ import UIKit
 class GiphyCell: UICollectionViewCell {
   static let cellID = "UICollectionViewCell"
   
-  var imageURL: String? {
-    didSet {
-      self.giphyImageView.loadImage(imageURL)
-    }
-  }
-  
   let giphyImageView : UIImageView = {
     let v = UIImageView()
     v.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +21,6 @@ class GiphyCell: UICollectionViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
-    imageURL = nil
     giphyImageView.image = nil
   }
   

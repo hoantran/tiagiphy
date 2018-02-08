@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B784D40202A1BBE008E5366 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D3F202A1BBE008E5366 /* Constants.swift */; };
+		3B784D43202BB7F8008E5366 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D42202BB7F8008E5366 /* ImageCache.swift */; };
+		3B784D45202BC392008E5366 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D44202BC392008E5366 /* ImageCacheTests.swift */; };
 		3BA5689A202A1369009F0DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA56899202A1369009F0DAD /* AppDelegate.swift */; };
 		3BA568A1202A1369009F0DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A0202A1369009F0DAD /* Assets.xcassets */; };
 		3BA568A4202A1369009F0DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A2202A1369009F0DAD /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 		128C69E1BBCD809F8E25DC57 /* Pods_TiaGiphyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiaGiphyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B784D3F202A1BBE008E5366 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B784D41202A689B008E5366 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3B784D42202BB7F8008E5366 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		3B784D44202BC392008E5366 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
 		3BA56896202A1369009F0DAD /* TiaGiphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiaGiphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA56899202A1369009F0DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BA568A0202A1369009F0DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B784D46202BC3A2008E5366 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3B784D44202BC392008E5366 /* ImageCacheTests.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		3BA5688D202A1369009F0DAD = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA568AE202A1369009F0DAD /* TiaGiphyTests.swift */,
+				3B784D46202BC3A2008E5366 /* helpers */,
 				3BA568B0202A1369009F0DAD /* Info.plist */,
 			);
 			path = TiaGiphyTests;
@@ -180,6 +193,7 @@
 				3BA568D7202A17C8009F0DAD /* GiphyAPIService.swift */,
 				3B784D3F202A1BBE008E5366 /* Constants.swift */,
 				3BA568D9202A17DC009F0DAD /* Extensions.swift */,
+				3B784D42202BB7F8008E5366 /* ImageCache.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -513,6 +527,7 @@
 				3BA568C9202A1438009F0DAD /* MainController.swift in Sources */,
 				3BA568D5202A179E009F0DAD /* SwiftyGiphyGridLayoutDelegateImpl.swift in Sources */,
 				3BA568CD202A170B009F0DAD /* MainControllerDataSource.swift in Sources */,
+				3B784D43202BB7F8008E5366 /* ImageCache.swift in Sources */,
 				3BA568D8202A17C8009F0DAD /* GiphyAPIService.swift in Sources */,
 				3BA5689A202A1369009F0DAD /* AppDelegate.swift in Sources */,
 				3BA568CF202A1734009F0DAD /* GiphyCell.swift in Sources */,
@@ -525,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B784D45202BC392008E5366 /* ImageCacheTests.swift in Sources */,
 				3BA568AF202A1369009F0DAD /* TiaGiphyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
