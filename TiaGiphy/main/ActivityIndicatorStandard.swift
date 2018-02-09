@@ -17,16 +17,16 @@ extension MainController {
   }
   
   func stopActivityIndicator() {
-    DispatchQueue.main.async { [unowned self] in
-      self.activityIndicator.stopAnimating()
-      self.activityIndicator.isHidden = true
+    DispatchQueue.main.async { [weak self] in
+      self?.activityIndicator.stopAnimating()
+      self?.activityIndicator.isHidden = true
     }
   }
   
   func startActivityIndicator() {
-    DispatchQueue.main.async { [unowned self] in
-      self.activityIndicator.startAnimating()
-      self.activityIndicator.isHidden = false
+    DispatchQueue.main.async { [weak self] in
+      self?.activityIndicator.startAnimating()
+      self?.activityIndicator.isHidden = false
     }
   }
 }

@@ -10,26 +10,26 @@ import XCTest
 @testable import TiaGiphy
 
 class ImageCacheTests: XCTestCase {
-  var evictedObj: Any?
+  var sut: ImageCache?
   
   override func setUp() {
     super.setUp()
-    evictedObj = nil
+    sut = ImageCache()
   }
   
   override func tearDown() {
-    evictedObj = nil
+    sut = nil
     super.tearDown()
   }
 
   // This test should be necessary since Apple should have tested it already
   func testImageCacheCount(){
-    XCTAssertEqual(ImageCache.shared.countLimit, Constants.imageCacheCountLimit)
+    XCTAssertEqual(sut?.dict.countLimit, Constants.imageCacheCountLimit)
   }
-  
+
   // This test should be necessary since Apple should have tested it already
   func testImageCacheCostLimit(){
-    XCTAssertEqual(ImageCache.shared.totalCostLimit, Constants.imageCacheMemoryLimit)
+    XCTAssertEqual(sut?.dict.totalCostLimit, Constants.imageCacheMemoryLimit)
   }
 
 }

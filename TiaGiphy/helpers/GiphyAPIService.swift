@@ -13,8 +13,8 @@ class GiphyAPIService {
   fileprivate var isFirstSetReady = false
   
   func start(_ completion: @escaping ()->()) {
-    add(Constants.initialGifCount) { [unowned self] in
-      self.isFirstSetReady = true
+    add(Constants.initialGifCount) { [weak self] in
+      self?.isFirstSetReady = true
       completion()
     }
   }
@@ -23,23 +23,22 @@ class GiphyAPIService {
     var addedGifSet = [GiphyData]()
     
     for _ in 0..<increase {
-      fetch() { [unowned self] giphy in
+      fetch() { [weak self] giphy in
         if let giphy = giphy {
           addedGifSet.append(giphy)
         }
         
         // if there's a network problem, it'd be a long wait
         if addedGifSet.count == increase {
-          self.gifInfoSet.append(contentsOf: addedGifSet)
+          self?.gifInfoSet.append(contentsOf: addedGifSet)
           completion()
         }
       }
     }
   }
   
-  let urlStr = "https://api.giphy.com/v1/gifs/random?api_key=OsXGwLIpI3MamyPgIh9GmOiUvsLGsRq0&tag=&rating=G"
   func fetch(_ completion: @escaping (GiphyData?)->Void) {
-    guard let url = URL(string: urlStr) else {
+    guard let url = URL(string: Constants.giphyRandonEndpointURL) else {
       print("ERR: Invalid giphy URL")
       completion(nil)
       return
@@ -56,7 +55,6 @@ class GiphyAPIService {
       
       do {
         let giphy = try JSONDecoder().decode(GiphyData.self, from: data)
-        print(data)
         completion(giphy)
         return
       } catch let jsonErr {

@@ -40,25 +40,25 @@ extension UIColor {
 // idea from Brian Voong's game of chats
 extension UIImageView {
   
-  func loadImage(_ urlStr: String?, _ mgr: SwiftyGifManager) {
-    if let profileURL = urlStr, let urlComponents = URLComponents(string: profileURL) {
-      if let cachedImage = ImageCache.shared.object(forKey: profileURL as NSString) {
+  func loadImage(url: String?, cache: ImageCache, swiftyManager: SwiftyGifManager) {
+    if let gifURL = url, let urlComponents = URLComponents(string: gifURL) {
+      if let cachedImage = cache.dict.object(forKey: gifURL as NSString) {
         DispatchQueue.main.async { [unowned self] in
-          self.setGifImage(cachedImage, manager: mgr)
+          self.setGifImage(cachedImage, manager: swiftyManager)
         }
         return
       }
       
       let session = URLSession(configuration: .default)
-      guard let url = urlComponents.url else { return }
+      guard let urlSession = urlComponents.url else { return }
       
-      let datatask = session.dataTask(with: url) { (data, response, error) in
+      let datatask = session.dataTask(with: urlSession) { (data, response, error) in
         if error == nil {
           let downloadedImage = UIImage(gifData: data!)
-          ImageCache.shared.setObject(downloadedImage, forKey: profileURL as NSString)
+          cache.dict.setObject(downloadedImage, forKey: gifURL as NSString)
           DispatchQueue.main.async { [unowned self] in
             self.alpha = 0
-            self.setGifImage(downloadedImage, manager: mgr)
+            self.setGifImage(downloadedImage, manager: swiftyManager)
             UIView.animate(withDuration: 0.3){
               self.alpha = 1
             }

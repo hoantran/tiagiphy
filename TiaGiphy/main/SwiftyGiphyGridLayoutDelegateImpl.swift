@@ -10,7 +10,7 @@ import UIKit
 
 extension MainController: SwiftyGiphyGridLayoutDelegate {
   func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
-    if let giphy = getGiphy(indexPath.item) {
+    if let giphy = giphyAPIService.get(indexPath.item) {
       if let imageHeight = Int(giphy.data.image_height), let imageWidth = Int(giphy.data.image_width) {
         let width = getCellWidth()
         let height = width * ( (CGFloat)(imageHeight) / (CGFloat)(imageWidth) )

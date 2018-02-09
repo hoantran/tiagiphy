@@ -10,6 +10,7 @@
 		3B784D40202A1BBE008E5366 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D3F202A1BBE008E5366 /* Constants.swift */; };
 		3B784D43202BB7F8008E5366 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D42202BB7F8008E5366 /* ImageCache.swift */; };
 		3B784D45202BC392008E5366 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B784D44202BC392008E5366 /* ImageCacheTests.swift */; };
+		3B8B17FB202CED7200C456F5 /* MainControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B17FA202CED7200C456F5 /* MainControllerTests.swift */; };
 		3BA5689A202A1369009F0DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA56899202A1369009F0DAD /* AppDelegate.swift */; };
 		3BA568A1202A1369009F0DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A0202A1369009F0DAD /* Assets.xcassets */; };
 		3BA568A4202A1369009F0DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A2202A1369009F0DAD /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 		3B784D41202A689B008E5366 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		3B784D42202BB7F8008E5366 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		3B784D44202BC392008E5366 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		3B8B17FA202CED7200C456F5 /* MainControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerTests.swift; sourceTree = "<group>"; };
 		3BA56896202A1369009F0DAD /* TiaGiphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiaGiphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA56899202A1369009F0DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BA568A0202A1369009F0DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		3B8B17F9202CED3300C456F5 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3B8B17FA202CED7200C456F5 /* MainControllerTests.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
 		3BA5688D202A1369009F0DAD = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		3BA568AD202A1369009F0DAD /* TiaGiphyTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B8B17F9202CED3300C456F5 /* main */,
 				3BA568AE202A1369009F0DAD /* TiaGiphyTests.swift */,
 				3B784D46202BC3A2008E5366 /* helpers */,
 				3BA568B0202A1369009F0DAD /* Info.plist */,
@@ -542,6 +553,7 @@
 			files = (
 				3B784D45202BC392008E5366 /* ImageCacheTests.swift in Sources */,
 				3BA568AF202A1369009F0DAD /* TiaGiphyTests.swift in Sources */,
+				3B8B17FB202CED7200C456F5 /* MainControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

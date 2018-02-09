@@ -13,9 +13,8 @@
 import UIKit
 
 class ImageCache {
-  private init(){}
   
-  static let shared: NSCache<NSString, UIImage> = {
+  let dict: NSCache<NSString, UIImage> = {
     let cache = NSCache<NSString, UIImage>()
     cache.name = "GiphyImageCache"
     cache.countLimit = Constants.imageCacheCountLimit

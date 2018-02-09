@@ -9,15 +9,21 @@
 import UIKit
 import SwiftyGif
 
+protocol MainControllerDelegate: class {
+  func finalizeSetup()
+}
+
 class MainController: UIViewController, UICollectionViewDelegate {
-  public var numberOfItemsPerSection = 0
-  public let bkgColors = [UIColor(hex: "0x595FFF"), UIColor(hex: "0x69FFFA"), UIColor(hex: "0xDCFF96"), UIColor(hex: "0xFFB0AD"), UIColor(hex: "0xFF87FF")]
-  public let giphyAPIService = GiphyAPIService()
-  public let gifManager = SwiftyGifManager(memoryLimit:Constants.gifManagerMemoryLimitInMB)
-  let semaphore = DispatchSemaphore(value: 1)
-  private var scrollRequestEnabled = true
-  let semaphoreQueue = DispatchQueue.global(qos: .userInitiated)
+  weak var delegate: MainControllerDelegate?
   
+  public var giphyAPIService = GiphyAPIService()
+  public var gifManager = SwiftyGifManager(memoryLimit:Constants.gifManagerMemoryLimitInMB)
+  public var imageCache = ImageCache()
+  
+  let semaphore = DispatchSemaphore(value: 1)
+  let semaphoreQueue = DispatchQueue.global(qos: .userInitiated)
+  private var scrollRequestEnabled = true
+
   lazy var mainView: UICollectionView = {
     let layout = SwiftyGiphyGridLayout()
     layout.delegate = self
@@ -62,9 +68,9 @@ class MainController: UIViewController, UICollectionViewDelegate {
     let offsetY = scrollView.contentOffset.y
     let contentHeight = scrollView.contentSize.height
     
-    // this check is risky when the initial cells do not overfill the screen
+    // this check is just a tad Xrisky when the initial cells do not overfill the screen
     // when that happens, the screen will not scroll and stuck with the initial count of gif's
-    if offsetY > contentHeight - scrollView.frame.size.height {
+    if offsetY > contentHeight - (2 * scrollView.frame.size.height) {
       semaphoreQueue.async { [unowned self] in
         self.startActivityIndicator()
         self.semaphore.wait()
@@ -80,18 +86,29 @@ class MainController: UIViewController, UICollectionViewDelegate {
   }
   
   fileprivate func scrollDown(completion: @escaping ()->()) {
-    let increase = Constants.gifIncrementCount 
+    let increase = Constants.gifIncrementCount
+    let oldCount = giphyAPIService.count
     giphyAPIService.add(increase) { [unowned self] in
       var indexPaths = [IndexPath]()
       for i in 0..<increase {
-        let indexPath = IndexPath(item: self.numberOfItemsPerSection + i, section: 0)
+        let indexPath = IndexPath(item: oldCount + i, section: 0)
         indexPaths.append(indexPath)
       }
-      self.numberOfItemsPerSection += increase
       DispatchQueue.main.async { [unowned self] in
         self.mainView.insertItems(at: indexPaths)
       }
       completion()
+    }
+  }
+  
+  func startInitialLoad(){
+    startActivityIndicator()
+    giphyAPIService.start() { [weak self] in
+      DispatchQueue.main.async { [weak self] in
+        self?.mainView.isHidden = false
+        self?.stopActivityIndicator()
+        self?.mainView.reloadData()
+      }
     }
   }
   
@@ -102,14 +119,9 @@ class MainController: UIViewController, UICollectionViewDelegate {
     setupNavBar()
     layoutCollectionView()
     setupActivityIndicator()
-    startActivityIndicator()
-    giphyAPIService.start() {
-      self.numberOfItemsPerSection = Constants.initialGifCount
-      DispatchQueue.main.async { [unowned self] in
-        self.mainView.isHidden = false
-        self.stopActivityIndicator()
-        self.mainView.reloadData()
-      }
-    }
+    
+    self.delegate?.finalizeSetup()
+    
+    startInitialLoad()
   }
 }
