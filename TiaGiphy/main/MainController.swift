@@ -13,7 +13,7 @@ protocol MainControllerDelegate: class {
   func finalizeSetup()
 }
 
-class MainController: UIViewController, UICollectionViewDelegate {
+class MainController: UIViewController {
   weak var delegate: MainControllerDelegate?
   
   public var giphyAPIService = GiphyAPIService()

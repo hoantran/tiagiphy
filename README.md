@@ -14,6 +14,9 @@ Modify settings in the Constants file to change some of the app's behaviors.
 * Swift 4.0
 * iOS 11.2
 
+### Notes
+* use TiaGiphy.xcworkspace , because the project uses  cocoapod
+
 
 
 

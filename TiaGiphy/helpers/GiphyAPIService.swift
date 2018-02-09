@@ -19,6 +19,10 @@ class GiphyAPIService {
     }
   }
   
+  // should put in a limit of "increase" or
+  // devise a simple algorithm to limit the number URLSession threads, when
+  // "increase" is a very large number, because
+  // the for loop would spin up the number of URLSession threads equaled to "increase"
   func add(_ increase: Int, completion: @escaping ()->()) {
     var addedGifSet = [GiphyData]()
     

@@ -25,6 +25,8 @@
 		3BA568D8202A17C8009F0DAD /* GiphyAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568D7202A17C8009F0DAD /* GiphyAPIService.swift */; };
 		3BA568DA202A17DC009F0DAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568D9202A17DC009F0DAD /* Extensions.swift */; };
 		3BA568DD202A1809009F0DAD /* GiphyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568DC202A1809009F0DAD /* GiphyData.swift */; };
+		3BC56BC9202DA13E00E7B155 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC56BC8202DA13E00E7B155 /* DetailController.swift */; };
+		3BC56BCB202E1CF300E7B155 /* MainControllerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC56BCA202E1CF300E7B155 /* MainControllerViewDelegate.swift */; };
 		4A65F4977323FC3C1ED50C43 /* Pods_TiaGiphyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC0142D7E3F52F20127C4E8 /* Pods_TiaGiphyTests.framework */; };
 		94737B43999962671442452E /* Pods_TiaGiphyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128C69E1BBCD809F8E25DC57 /* Pods_TiaGiphyUITests.framework */; };
 		94A06CEAA6901BC63658280E /* Pods_TiaGiphy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B8087B630F90D1205EA1BB /* Pods_TiaGiphy.framework */; };
@@ -75,6 +77,8 @@
 		3BA568D7202A17C8009F0DAD /* GiphyAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAPIService.swift; sourceTree = "<group>"; };
 		3BA568D9202A17DC009F0DAD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3BA568DC202A1809009F0DAD /* GiphyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyData.swift; sourceTree = "<group>"; };
+		3BC56BC8202DA13E00E7B155 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		3BC56BCA202E1CF300E7B155 /* MainControllerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewDelegate.swift; sourceTree = "<group>"; };
 		3CFA5CA6021F9EAA609EE7C2 /* Pods-TiaGiphyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiaGiphyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiaGiphyTests/Pods-TiaGiphyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		404AAFFAC3D15CCF02961511 /* Pods-TiaGiphyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiaGiphyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiaGiphyUITests/Pods-TiaGiphyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		811492F3EDE188A5CC729E63 /* Pods-TiaGiphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiaGiphy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiaGiphy/Pods-TiaGiphy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				3BA568DB202A17FE009F0DAD /* models */,
 				3BA568D6202A17BC009F0DAD /* helpers */,
 				3BA568C7202A141F009F0DAD /* main */,
+				3BC56BC7202DA11C00E7B155 /* detail */,
 				3BA56899202A1369009F0DAD /* AppDelegate.swift */,
 				3BA568A0202A1369009F0DAD /* Assets.xcassets */,
 				3BA568A2202A1369009F0DAD /* LaunchScreen.storyboard */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA568C8202A1438009F0DAD /* MainController.swift */,
+				3BC56BCA202E1CF300E7B155 /* MainControllerViewDelegate.swift */,
 				3BA568D2202A1781009F0DAD /* SwiftyGiphyGridLayout.swift */,
 				3BA568D4202A179E009F0DAD /* SwiftyGiphyGridLayoutDelegateImpl.swift */,
 				3BA568CC202A170B009F0DAD /* MainControllerDataSource.swift */,
@@ -215,6 +221,14 @@
 				3BA568DC202A1809009F0DAD /* GiphyData.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		3BC56BC7202DA11C00E7B155 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				3BC56BC8202DA13E00E7B155 /* DetailController.swift */,
+			);
+			path = detail;
 			sourceTree = "<group>";
 		};
 		565DADE12B514049CF7D2466 /* Frameworks */ = {
@@ -540,9 +554,11 @@
 				3BA568CD202A170B009F0DAD /* MainControllerDataSource.swift in Sources */,
 				3B784D43202BB7F8008E5366 /* ImageCache.swift in Sources */,
 				3BA568D8202A17C8009F0DAD /* GiphyAPIService.swift in Sources */,
+				3BC56BC9202DA13E00E7B155 /* DetailController.swift in Sources */,
 				3BA5689A202A1369009F0DAD /* AppDelegate.swift in Sources */,
 				3BA568CF202A1734009F0DAD /* GiphyCell.swift in Sources */,
 				3BA568D3202A1781009F0DAD /* SwiftyGiphyGridLayout.swift in Sources */,
+				3BC56BCB202E1CF300E7B155 /* MainControllerViewDelegate.swift in Sources */,
 				3BA568DD202A1809009F0DAD /* GiphyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
