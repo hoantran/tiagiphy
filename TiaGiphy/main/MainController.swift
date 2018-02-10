@@ -68,7 +68,7 @@ class MainController: UIViewController {
     let offsetY = scrollView.contentOffset.y
     let contentHeight = scrollView.contentSize.height
     
-    // this check is just a tad Xrisky when the initial cells do not overfill the screen
+    // this check is just a tad risky when the initial cells do not overfill the screen
     // when that happens, the screen will not scroll and stuck with the initial count of gif's
     if offsetY > contentHeight - (2 * scrollView.frame.size.height) {
       semaphoreQueue.async { [unowned self] in

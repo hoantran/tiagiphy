@@ -16,7 +16,6 @@ class DetailController: UIViewController, UIGestureRecognizerDelegate {
   var giphy: GiphyData? {
     didSet {
       layoutCentralView()
-      
     }
   }
   
@@ -32,7 +31,6 @@ class DetailController: UIViewController, UIGestureRecognizerDelegate {
     var height = safeHeight
     var width = safeWidth
     
-    // portrait mode
     if imageRatio >= safeRatio {
       height = safeWidth / imageRatio
     } else {

@@ -14,7 +14,6 @@
 		3BA5689A202A1369009F0DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA56899202A1369009F0DAD /* AppDelegate.swift */; };
 		3BA568A1202A1369009F0DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A0202A1369009F0DAD /* Assets.xcassets */; };
 		3BA568A4202A1369009F0DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA568A2202A1369009F0DAD /* LaunchScreen.storyboard */; };
-		3BA568AF202A1369009F0DAD /* TiaGiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568AE202A1369009F0DAD /* TiaGiphyTests.swift */; };
 		3BA568BA202A1369009F0DAD /* TiaGiphyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568B9202A1369009F0DAD /* TiaGiphyUITests.swift */; };
 		3BA568C9202A1438009F0DAD /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568C8202A1438009F0DAD /* MainController.swift */; };
 		3BA568CD202A170B009F0DAD /* MainControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA568CC202A170B009F0DAD /* MainControllerDataSource.swift */; };
@@ -63,7 +62,6 @@
 		3BA568A3202A1369009F0DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BA568A5202A1369009F0DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA568AA202A1369009F0DAD /* TiaGiphyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiaGiphyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BA568AE202A1369009F0DAD /* TiaGiphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiaGiphyTests.swift; sourceTree = "<group>"; };
 		3BA568B0202A1369009F0DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA568B5202A1369009F0DAD /* TiaGiphyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiaGiphyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA568B9202A1369009F0DAD /* TiaGiphyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiaGiphyUITests.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				3B8B17F9202CED3300C456F5 /* main */,
-				3BA568AE202A1369009F0DAD /* TiaGiphyTests.swift */,
 				3B784D46202BC3A2008E5366 /* helpers */,
 				3BA568B0202A1369009F0DAD /* Info.plist */,
 			);
@@ -568,7 +565,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B784D45202BC392008E5366 /* ImageCacheTests.swift in Sources */,
-				3BA568AF202A1369009F0DAD /* TiaGiphyTests.swift in Sources */,
 				3B8B17FB202CED7200C456F5 /* MainControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
