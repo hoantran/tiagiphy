@@ -11,6 +11,7 @@ import Foundation
 class GiphyAPIService {
   fileprivate var gifInfoSet = [GiphyData]()
   fileprivate var isFirstSetReady = false
+  fileprivate var order = 0
   
   func start(_ completion: @escaping ()->()) {
     add(Constants.initialGifCount) { [weak self] in
@@ -50,7 +51,13 @@ class GiphyAPIService {
     
     // URLSession does not seem to retry when Internet connection goes from OFF to ON
     // Perhaps, AlamoFire library does
+    let mine = order
+    order += 1
+    
+    print("TASK [\(mine)] >> started")
     URLSession.shared.dataTask(with: url) { data, response, err in
+      print("TASK [\(mine)] << FINISHED")
+      
       guard let data = data else {
         print("ERR: Invalid giphy URL")
         completion(nil)

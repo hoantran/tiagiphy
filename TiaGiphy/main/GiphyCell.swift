@@ -22,6 +22,7 @@ class GiphyCell: UICollectionViewCell {
   override func prepareForReuse() {
     super.prepareForReuse()
     giphyImageView.image = nil
+    giphyImageView.gifImage = nil
   }
   
   override init(frame: CGRect) {

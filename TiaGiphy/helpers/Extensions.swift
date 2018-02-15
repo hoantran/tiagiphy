@@ -57,11 +57,7 @@ extension UIImageView {
           let downloadedImage = UIImage(gifData: data!)
           cache.dict.setObject(downloadedImage, forKey: gifURL as NSString)
           DispatchQueue.main.async { [unowned self] in
-            self.alpha = 0
             self.setGifImage(downloadedImage, manager: swiftyManager)
-            UIView.animate(withDuration: 0.3){
-              self.alpha = 1
-            }
           }
         } else {
           print(error!.localizedDescription)
