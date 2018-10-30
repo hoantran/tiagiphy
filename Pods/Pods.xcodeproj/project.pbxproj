@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,7 +39,7 @@
 		00FC8CEAD3B1CE6BDE7ECFEC7979ABFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E150B84501F050900F9727741365DC4 /* Pods-TiaGiphy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiaGiphy-resources.sh"; sourceTree = "<group>"; };
 		1A72B4C7FF6A6C14C1743608521863BF /* Pods-TiaGiphyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiaGiphyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F17EE5A7CF7725DA6C3E0FF3602246F /* Pods_TiaGiphyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TiaGiphyTests.framework; path = "Pods-TiaGiphyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F17EE5A7CF7725DA6C3E0FF3602246F /* Pods_TiaGiphyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiaGiphyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218F7BB0BE5E21188FFC65666193A2C3 /* Pods-TiaGiphy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiaGiphy.release.xcconfig"; sourceTree = "<group>"; };
 		30A8B7417D78073485AE4B02D7C42BCC /* Pods-TiaGiphyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiaGiphyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		337F9A841DB8EBA281C97F70E35E7859 /* Pods-TiaGiphyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TiaGiphyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		374E1434CC696D0BC85D7E45AD667D3D /* Pods-TiaGiphy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TiaGiphy-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F2704E6405639D880DFFF9291B93CA9 /* Pods-TiaGiphyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TiaGiphyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4615C028631751FFD6914156F9A9B4E3 /* Pods-TiaGiphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TiaGiphy.debug.xcconfig"; sourceTree = "<group>"; };
-		4B045F8ED7097CD4AA2233DC2BA56A4C /* Pods_TiaGiphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TiaGiphy.framework; path = "Pods-TiaGiphy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B045F8ED7097CD4AA2233DC2BA56A4C /* Pods_TiaGiphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiaGiphy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CD3789C9842FC29008C124A3221364 /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
 		5A6898DC2ECFD78FA0605DB8B9445946 /* Pods-TiaGiphyTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiaGiphyTests-resources.sh"; sourceTree = "<group>"; };
 		6524AEE91F1B44408A775670B453A0CA /* Pods-TiaGiphy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TiaGiphy-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -57,15 +57,15 @@
 		854829C6BA88F29DAF579F9E6FF27EE9 /* Pods-TiaGiphy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TiaGiphy-dummy.m"; sourceTree = "<group>"; };
 		85605D35B110301CB04FFFB73C0AF2EC /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
 		8B4E10B743550D2A906C9B20BEAD6C44 /* Pods-TiaGiphyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TiaGiphyUITests-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		969BBBB77168374D16244770AB63C2A0 /* SwiftyGif.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.xcconfig; sourceTree = "<group>"; };
 		98366527587636C0E167B5D6B1028AEF /* Pods-TiaGiphyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TiaGiphyTests-umbrella.h"; sourceTree = "<group>"; };
 		A32484CAA2C3D4CD93E6B438E9BF0EA0 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		A4D3DA66C70F5E8B71E39CEA2FD4ADC8 /* Pods-TiaGiphyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TiaGiphyTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A754ED9D3323A7F19B3D0839B2E5E534 /* Pods-TiaGiphy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TiaGiphy.modulemap"; sourceTree = "<group>"; };
 		B00931BAC84B4E13BBDB191E949A206A /* Pods-TiaGiphyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TiaGiphyUITests-umbrella.h"; sourceTree = "<group>"; };
-		B1E28F8EBAF933345AFE634AF5A3B1D1 /* Pods_TiaGiphyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TiaGiphyUITests.framework; path = "Pods-TiaGiphyUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA5F921BE45934A5EBE34A1FF03C4F05 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyGif.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1E28F8EBAF933345AFE634AF5A3B1D1 /* Pods_TiaGiphyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiaGiphyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5F921BE45934A5EBE34A1FF03C4F05 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBE790EDD2E83C73F178AF80D010FC2 /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
 		CB0F492B3F4AB5FF551E29937896A152 /* Pods-TiaGiphyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TiaGiphyTests-frameworks.sh"; sourceTree = "<group>"; };
 		CCEFFDBE8BB925046553567BC9BDB79D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,7 +166,6 @@
 				A32484CAA2C3D4CD93E6B438E9BF0EA0 /* UIImageView+SwiftyGif.swift */,
 				F10570559B20F10DD53713F44F627F33 /* Support Files */,
 			);
-			name = SwiftyGif;
 			path = SwiftyGif;
 			sourceTree = "<group>";
 		};
@@ -372,7 +371,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					10F89542696259BB707656CE78FF0A4D = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -563,7 +567,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -593,8 +597,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -628,7 +632,7 @@
 				PRODUCT_NAME = Pods_TiaGiphy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -820,6 +824,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

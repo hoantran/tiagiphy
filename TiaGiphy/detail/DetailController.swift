@@ -65,7 +65,7 @@ class DetailController: UIViewController, UIGestureRecognizerDelegate {
   }()
   
   lazy var activityIndicator: UIActivityIndicatorView = {
-    let ai = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let ai = UIActivityIndicatorView(style: .whiteLarge)
     return ai
   }()
   

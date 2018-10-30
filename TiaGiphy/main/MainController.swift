@@ -39,7 +39,7 @@ class MainController: UIViewController {
   }()
   
   let activityIndicator: UIActivityIndicatorView = {
-    let ai = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let ai = UIActivityIndicatorView(style: .whiteLarge)
     ai.hidesWhenStopped = true
     return ai
   }()

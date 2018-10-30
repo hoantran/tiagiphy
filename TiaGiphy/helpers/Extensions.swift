@@ -37,6 +37,34 @@ extension UIColor {
   }
 }
 
+// https://gist.github.com/steipete/1144242
+extension UIImage {
+  
+  func forceLoad() -> UIImage {
+    guard let imageRef = self.cgImage else {
+      return self //failed
+    }
+    let width = imageRef.width
+    let height = imageRef.height
+    let colourSpace = CGColorSpaceCreateDeviceRGB()
+    let bitmapInfo: UInt32 = CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
+    guard let imageContext = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: width * 4, space: colourSpace, bitmapInfo: bitmapInfo) else {
+      return self //failed
+    }
+    let rect = CGRect(x: 0, y: 0, width: width, height: height)
+    imageContext.draw(imageRef, in: rect)
+    if let outputImage = imageContext.makeImage() {
+//      let cachedImage = UIImage(cgImage: outputImage)
+      let cachedImage = UIImage(cgImage: outputImage, scale: scale, orientation: imageOrientation)
+      return cachedImage
+    }
+    return self //failed
+  }
+  
+  
+}
+
+
 // idea from Brian Voong's game of chats
 extension UIImageView {
   
@@ -55,9 +83,12 @@ extension UIImageView {
       let datatask = session.dataTask(with: urlSession) { (data, response, error) in
         if error == nil {
           let downloadedImage = UIImage(gifData: data!)
-          cache.dict.setObject(downloadedImage, forKey: gifURL as NSString)
+          let decodedImage = downloadedImage.forceLoad()
+          cache.dict.setObject(decodedImage, forKey: gifURL as NSString)
+//          cache.dict.setObject(downloadedImage, forKey: gifURL as NSString)
           DispatchQueue.main.async { [unowned self] in
-            self.setGifImage(downloadedImage, manager: swiftyManager)
+            self.setGifImage(decodedImage, manager: swiftyManager)
+//            self.setGifImage(downloadedImage, manager: swiftyManager)
           }
         } else {
           print(error!.localizedDescription)
